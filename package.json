@@ -1,0 +1,36 @@
+{
+  "name": "cluster-chat-example",
+  "version": "1.0.0",
+  "description": "clustering websocket with redis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dali rekik (modified.dali.power@gmail.com)",
+  "dependencies": {
+    "MD5": "^1.2.1",
+    "bluebird": "^2.3.11",
+    "cluster": "^0.7.7",
+    "express": "^4.10.6",
+    "fs": "0.0.2",
+    "hapi": "^8.0.0",
+    "http-proxy": "^1.7.3",
+    "redis": "^0.12.1",
+    "request": "^2.51.0",
+    "satellite": "0.0.2",
+    "socket.io": "^1.2.1"
+  },
+  "devDependencies": {
+    "del": "^1.1.0",
+    "gulp": "^3.8.10",
+    "gulp-develop-server": "^0.2.5",
+    "gulp-jscpd": "0.0.3",
+    "gulp-livereload": "^3.0.2",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-minify-html": "^0.1.7",
+    "gulp-rev": "^2.0.1",
+    "gulp-uglify": "^1.0.2",
+    "gulp-usemin": "^0.3.8",
+    "gulp-zip": "^2.0.2"
+  }
+}

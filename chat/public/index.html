@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- build:css css/combined.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <!-- endbuild -->
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row " style="padding-top:40px;">
+        <h3 class="text-center">CLUSTERING WEBSOCKET CHAT EXAMPLE </h3>
+        <br/><br/>
+
+        <!--   LOGIN DIV -->
+        <div class="col-md-8" id="login">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    Login
+                </div>
+                <div class="panel-body">
+                    <p>This a nodejs chat room (use gravator for the avatar)</p>
+                </div>
+                <form class="form-inline" role="form" id="loginform">
+                    <div class="panel-footer">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="login" id="username"
+                                       placeholder="User name"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="mail" class="form-control" id="mail" name="mail" placeholder="E-mail"/>
+                        </div>
+                        <button type="submit" class="btn btn-info">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END LOGIN DIV -->
+
+        <!--  CHAT DIV -->
+        <div class="col-md-8" id="chat" style="display: none">
+            <div class="panel panel-info">
+                <div class="panel-body">
+                    <ul class="media-list" id="messages">
+                        <li class="media">
+                            <div class="media-body">
+                                <div class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object img-circle " src="{{msg.user.avatar}}"/>
+                                    </a>
+
+                                    <div class="media-body">
+                                        {{msg.message}}
+                                        <br/>
+                                        <small class="text-muted">{{msg.user.username}} | {{msg.h}}:{{msg.m}}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <hr/>
+                    </ul>
+                </div>
+                <form action="" id="form">
+                    <div class="panel-footer">
+                        <div class="input-group">
+                            <input type="text" id="message" class="form-control" placeholder="Enter Message"/>
+                            <span class="input-group-btn">
+                                <button class="btn btn-info" type="submit">SEND</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END CHAT DIV -->
+
+        <!-- USERs LIST DIV -->
+        <div class="col-md-4" style="display: none" id="users-list">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    ONLINE USERS
+                </div>
+                <div class="panel-body">
+                    <ul class="media-list" id="users">
+                        <li class="media" id="{{user.id}}">
+                            <div class="media-body">
+                                <div class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object img-circle" style="max-height:40px;"
+                                             src="{{user.avatar}}"/>
+                                    </a>
+
+                                    <div class="media-body">
+                                        <h5>{{user.username}} | User </h5>
+                                        <small class="text-muted">{{user.conTime}}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- END USERS LIST DIV -->
+
+
+    </div>
+</div>
+
+<!--<script src="https://localhost/socket.io/socket.io.js"></script>-->
+
+<script src="bower_components/socket.io-client/socket.io.js"></script>
+
+<!-- build:js scripts/combined.js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+<script src="bower_components/mustache/mustache.js"></script>
+
+<script src="js/client.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

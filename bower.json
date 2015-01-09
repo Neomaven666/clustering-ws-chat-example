@@ -1,0 +1,18 @@
+{
+  "name": "cluster-chat-example",
+  "version": "0.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "authors": [
+    "dali rekik (mohamedali.rekik@serli.com)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "mustache": "~0.8.2",
+    "bootstrap": "~3.3.1",
+    "socket.io-client": "~1.2.1",
+    "flat-ui": "~2.2.2"
+  }
+}
